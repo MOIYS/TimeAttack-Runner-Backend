@@ -1,0 +1,32 @@
+# ================================================
+# 1. 공통
+# ================================================
+
+# VS Code
+.vscode/
+
+# Mac OS
+.DS_Store
+
+# IntelliJ IDEA
+**/.idea
+**/*.iws
+**/*.iml
+**/*.ipr
+**/out/
+
+# ================================================
+# 2. server
+# ================================================
+server/HELP.md
+
+# Gradle
+server/.gradle/
+server/build/
+
+!server/gradle/wrapper/gradle-wrapper.jar
+
+# Java
+server/*.log
+server/hs_err_pid*
+server/replay_pid*
