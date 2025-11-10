@@ -55,7 +55,7 @@ class RecordRequestDtoTest {
 
     @Test
     @DisplayName("실패: username이 100자를 초과할 때, 유효성 검사에 실패한다.")
-    void usernameMustNot() {
+    void usernameMustNotExceed100Characters() {
         String longUsername = "a".repeat(101);
         var invalidRequest = new RecordRequestDto(20.0, longUsername, List.of());
 
