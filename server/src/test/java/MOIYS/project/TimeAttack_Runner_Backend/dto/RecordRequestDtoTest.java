@@ -52,4 +52,16 @@ class RecordRequestDtoTest {
         assertThat(violations).isNotEmpty();
         assertThat(violations.iterator().next().getPropertyPath().toString()).isEqualTo("username");
     }
+
+    @Test
+    @DisplayName("실패: username이 100자를 초과할 때, 유효성 검사에 실패한다.")
+    void usernameMustNot() {
+        String longUsername = "a".repeat(101);
+        var invalidRequest = new RecordRequestDto(20.0, longUsername, List.of());
+
+        Set<ConstraintViolation<RecordRequestDto>> violations = validator.validate(invalidRequest);
+
+        assertThat(violations).isNotEmpty();
+        assertThat(violations.iterator().next().getPropertyPath().toString()).isEqualTo("username");
+    }
 }
