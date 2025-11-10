@@ -45,7 +45,7 @@ class RecordRequestDtoTest {
     @Test
     @DisplayName("실패: 'username'이 비어있을 때, 유효성 검사에 실패한다.")
     void should_fail_when_username_is_blank() {
-        var invalidRequest = new RecordRequestDto(20.0, "", List.of()); // 비어있음
+        var invalidRequest = new RecordRequestDto(20.0, "", List.of());
 
         Set<ConstraintViolation<RecordRequestDto>> violations = validator.validate(invalidRequest);
 
