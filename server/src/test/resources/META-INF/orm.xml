@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="https://jakarta.ee/xml/ns/persistence/orm"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence/orm https://jakarta.ee/xml/ns/persistence/orm_3_0.xsd"
+                 version="3.0">
+
+    <entity class="MOIYS.project.TimeAttack_Runner_Backend.domain.GhostData">
+        <attributes>
+            <basic name="coordinates">
+                <column name="coordinates" column-definition="CLOB" nullable="false" />
+            </basic>
+        </attributes>
+    </entity>
+</entity-mappings>
