@@ -1,8 +1,13 @@
 package MOIYS.project.TimeAttack_Runner_Backend.repository;
 
+import java.util.List;
+
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import MOIYS.project.TimeAttack_Runner_Backend.domain.Record;
 
 public interface RecordRepository extends JpaRepository<Record, Long> {
+
+    List<Record> findByOrderByRecordTimeAsc(Pageable pageable);
 }
