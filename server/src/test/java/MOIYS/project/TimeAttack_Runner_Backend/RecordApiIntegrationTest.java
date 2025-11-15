@@ -1,35 +1,36 @@
 package MOIYS.project.TimeAttack_Runner_Backend;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.header;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
+import java.util.List;
+
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.ActiveProfiles;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
+import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.core.type.TypeReference;
-
-import java.util.List;
-
-import static org.assertj.core.api.Assertions.assertThat;
-
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.header;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
-
+import MOIYS.project.TimeAttack_Runner_Backend.domain.GhostData;
+import MOIYS.project.TimeAttack_Runner_Backend.domain.Record;
 
 import MOIYS.project.TimeAttack_Runner_Backend.dto.CoordinateDto;
 import MOIYS.project.TimeAttack_Runner_Backend.dto.RecordRequestDto;
-import MOIYS.project.TimeAttack_Runner_Backend.domain.Record;
-import MOIYS.project.TimeAttack_Runner_Backend.domain.GhostData;
-import MOIYS.project.TimeAttack_Runner_Backend.repository.RecordRepository;
+
 import MOIYS.project.TimeAttack_Runner_Backend.repository.GhostDataRepository;
+import MOIYS.project.TimeAttack_Runner_Backend.repository.RecordRepository;
 
 @SpringBootTest
 @AutoConfigureMockMvc

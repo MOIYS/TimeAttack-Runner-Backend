@@ -1,19 +1,19 @@
 package MOIYS.project.TimeAttack_Runner_Backend.service;
 
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
+import java.util.List;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import lombok.RequiredArgsConstructor;
 
-import java.util.List;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
+import MOIYS.project.TimeAttack_Runner_Backend.domain.GhostData;
+import MOIYS.project.TimeAttack_Runner_Backend.domain.Record;
 import MOIYS.project.TimeAttack_Runner_Backend.dto.CoordinateDto;
 import MOIYS.project.TimeAttack_Runner_Backend.dto.RecordRequestDto;
-import MOIYS.project.TimeAttack_Runner_Backend.domain.Record;
-import MOIYS.project.TimeAttack_Runner_Backend.domain.GhostData;
 import MOIYS.project.TimeAttack_Runner_Backend.repository.RecordRepository;
 
 @Service

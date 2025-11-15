@@ -1,10 +1,10 @@
 package MOIYS.project.TimeAttack_Runner_Backend.dto;
 
+import java.util.List;
+
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
-
-import java.util.List;
 
 public record RecordRequestDto(
         @Min(value = 0, message = "기록 시간은 0보다 작을 수 없습니다.")
