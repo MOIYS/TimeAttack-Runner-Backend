@@ -1,19 +1,25 @@
 package MOIYS.project.TimeAttack_Runner_Backend.service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import lombok.RequiredArgsConstructor;
 
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import MOIYS.project.TimeAttack_Runner_Backend.domain.GhostData;
 import MOIYS.project.TimeAttack_Runner_Backend.domain.Record;
+
 import MOIYS.project.TimeAttack_Runner_Backend.dto.CoordinateDto;
 import MOIYS.project.TimeAttack_Runner_Backend.dto.RecordRequestDto;
+import MOIYS.project.TimeAttack_Runner_Backend.dto.RecordResponseDto;
+
 import MOIYS.project.TimeAttack_Runner_Backend.repository.RecordRepository;
 
 @Service
@@ -33,6 +39,16 @@ public class RecordService {
         newRecord.setGhostData(newGhostData);
 
         return recordRepository.save(newRecord);
+    }
+
+    public List<RecordResponseDto> findTopNByRecordTimeAsc(int topN) {
+        Pageable pageable = PageRequest.of(0, topN);
+
+        List<Record> records = recordRepository.findByOrderByRecordTimeAsc(pageable);
+
+        return records.stream()
+                .map(RecordResponseDto::from)
+                .collect(Collectors.toList());
     }
 
     private String toJsonString(List<CoordinateDto> coordinates) {
