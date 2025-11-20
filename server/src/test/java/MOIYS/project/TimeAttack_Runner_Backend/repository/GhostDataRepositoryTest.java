@@ -24,6 +24,9 @@ public class GhostDataRepositoryTest {
     @Autowired
     private GhostDataRepository ghostDataRepository;
 
+    @Autowired
+    private RecordRepository recordRepository;
+
     @Test
     @DisplayName("성공: GhostData Entity를 저장하고, 연관된 Record와 함께 조회할 수 있다.")
     void should_save_and_retrieve_ghost_data_with_linked_record() {
@@ -50,5 +53,25 @@ public class GhostDataRepositoryTest {
                     assertThat(ghostData.getRecord().getUsername()).isEqualTo("MOIYS");
                     assertThat(ghostData.getRecord().getRecordTime()).isEqualTo(50.2);
                 });
+    }
+
+    @Test
+    @DisplayName("성공: recordId로 ghostData를 조회하면 해당 데이터를 반환한다.")
+    void should_find_ghost_data_by_record_id() {
+        Record record = new Record("MOIYS", 43.9);
+        testEntityManager.persistAndFlush(record);
+
+        String testCoordinates = "[{\"x\":1.0,\"y\":1.0,\"z\":1.0},{\"x\":1.1,\"y\":1.0,\"z\":1.0}]";
+        GhostData ghostData = new GhostData(testCoordinates);
+        record.setGhostData(ghostData);
+
+        testEntityManager.persistAndFlush(ghostData);
+        testEntityManager.clear();
+
+        Optional<GhostData> foundGhost = ghostDataRepository.findByRecordId(record.getId());
+
+        assertThat(foundGhost).isPresent();
+        assertThat(foundGhost.get().getCoordinates()).isEqualTo(testCoordinates);
+        assertThat(foundGhost.get().getRecord().getId()).isEqualTo(record.getId());
     }
 }
