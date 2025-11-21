@@ -58,13 +58,4 @@ public class RecordController {
 
         return ResponseEntity.ok(leaderboard);
     }
-
-    @ExceptionHandler(ConstraintViolationException.class)
-    public ResponseEntity<Map<String, String>> handleInvalidParameter(ConstraintViolationException e) {
-        Map<String, String> error = Map.of(
-                "code", "BAD_REQUEST",
-                "message", "올바르지 않은 요청입니다."
-        );
-        return ResponseEntity.badRequest().body(error);
-    }
 }
