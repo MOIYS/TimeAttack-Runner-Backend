@@ -17,14 +17,10 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import org.mockito.Mockito;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-import org.springframework.boot.test.context.TestConfiguration;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Import;
 import org.springframework.http.MediaType;
+import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MockMvc;
 
 import MOIYS.project.TimeAttack_Runner_Backend.dto.RecordRequestDto;
@@ -32,9 +28,8 @@ import MOIYS.project.TimeAttack_Runner_Backend.dto.RecordRequestDto;
 import MOIYS.project.TimeAttack_Runner_Backend.service.RecordService;
 
 @WebMvcTest(RecordController.class)
-@Import(RecordControllerTest.MockConfig.class)
 public class RecordControllerTest {
-    @Autowired
+    @MockitoBean
     private RecordService recordService;
 
     @Autowired
@@ -42,14 +37,6 @@ public class RecordControllerTest {
 
     @Autowired
     private ObjectMapper objectMapper;
-
-    @TestConfiguration
-    static class MockConfig {
-        @Bean
-        public RecordService recordService() {
-            return Mockito.mock(RecordService.class);
-        }
-    }
 
     @Test
     @DisplayName("실패 (400 Bad Request): 'recordTime'이 음수일 때, 400을 반환한다.")
