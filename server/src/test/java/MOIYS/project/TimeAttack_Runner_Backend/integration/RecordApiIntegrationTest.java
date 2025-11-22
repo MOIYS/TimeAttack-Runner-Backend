@@ -1,4 +1,4 @@
-package MOIYS.project.TimeAttack_Runner_Backend;
+package MOIYS.project.TimeAttack_Runner_Backend.integration;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
