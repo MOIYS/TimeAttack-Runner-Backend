@@ -54,7 +54,7 @@ public class GhostDataControllerTest {
 
     @Test
     @DisplayName("실패 (404 Not Found): 존재하지 않는 recordId로 조회 시, 404를 반환한다.")
-    void return_not_found_when_record_exists() throws Exception {
+    void return_not_found_when_record_not_exists() throws Exception {
         Long nonExistentId = 999L;
         given(ghostDataService.findGhostDataByRecordId(nonExistentId))
                 .willThrow(new NoSuchElementException());
