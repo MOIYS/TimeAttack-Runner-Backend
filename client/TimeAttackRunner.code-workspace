@@ -1,0 +1,613 @@
+{
+	"folders": [
+		{
+			"name": "TimeAttackRunner",
+			"path": "."
+		},
+		{
+			"name": "UE5",
+			"path": "D:\\UE_5.4"
+		}
+	],
+	"settings": {
+		"typescript.tsc.autoDetect": "off",
+		"npm.autoDetect": "off"
+	},
+	"extensions": {
+		"recommendations": [
+			"ms-vscode.cpptools",
+			"ms-dotnettools.csharp"
+		]
+	},
+	"tasks": {
+		"version": "2.0.0",
+		"tasks": [
+			{
+				"label": "TimeAttackRunner Win64 Debug Build",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"TimeAttackRunner",
+					"Win64",
+					"Debug",
+					"D:\\woowaprecourse\\TimeAttack-Runner-Backend\\client\\TimeAttackRunner.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\UE_5.4"
+				}
+			},
+			{
+				"label": "TimeAttackRunner Win64 Debug Rebuild",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"TimeAttackRunner",
+					"Win64",
+					"Debug",
+					"D:\\woowaprecourse\\TimeAttack-Runner-Backend\\client\\TimeAttackRunner.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"TimeAttackRunner Win64 Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\UE_5.4"
+				}
+			},
+			{
+				"label": "TimeAttackRunner Win64 Debug Clean",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"args": [
+					"TimeAttackRunner",
+					"Win64",
+					"Debug",
+					"D:\\woowaprecourse\\TimeAttack-Runner-Backend\\client\\TimeAttackRunner.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\UE_5.4"
+				}
+			},
+			{
+				"label": "TimeAttackRunner Win64 DebugGame Build",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"TimeAttackRunner",
+					"Win64",
+					"DebugGame",
+					"D:\\woowaprecourse\\TimeAttack-Runner-Backend\\client\\TimeAttackRunner.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\UE_5.4"
+				}
+			},
+			{
+				"label": "TimeAttackRunner Win64 DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"TimeAttackRunner",
+					"Win64",
+					"DebugGame",
+					"D:\\woowaprecourse\\TimeAttack-Runner-Backend\\client\\TimeAttackRunner.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"TimeAttackRunner Win64 DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\UE_5.4"
+				}
+			},
+			{
+				"label": "TimeAttackRunner Win64 DebugGame Clean",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"args": [
+					"TimeAttackRunner",
+					"Win64",
+					"DebugGame",
+					"D:\\woowaprecourse\\TimeAttack-Runner-Backend\\client\\TimeAttackRunner.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\UE_5.4"
+				}
+			},
+			{
+				"label": "TimeAttackRunner Win64 Development Build",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"TimeAttackRunner",
+					"Win64",
+					"Development",
+					"D:\\woowaprecourse\\TimeAttack-Runner-Backend\\client\\TimeAttackRunner.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\UE_5.4"
+				}
+			},
+			{
+				"label": "TimeAttackRunner Win64 Development Rebuild",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"TimeAttackRunner",
+					"Win64",
+					"Development",
+					"D:\\woowaprecourse\\TimeAttack-Runner-Backend\\client\\TimeAttackRunner.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"TimeAttackRunner Win64 Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\UE_5.4"
+				}
+			},
+			{
+				"label": "TimeAttackRunner Win64 Development Clean",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"args": [
+					"TimeAttackRunner",
+					"Win64",
+					"Development",
+					"D:\\woowaprecourse\\TimeAttack-Runner-Backend\\client\\TimeAttackRunner.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\UE_5.4"
+				}
+			},
+			{
+				"label": "TimeAttackRunner Win64 Test Build",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"TimeAttackRunner",
+					"Win64",
+					"Test",
+					"D:\\woowaprecourse\\TimeAttack-Runner-Backend\\client\\TimeAttackRunner.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\UE_5.4"
+				}
+			},
+			{
+				"label": "TimeAttackRunner Win64 Test Rebuild",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"TimeAttackRunner",
+					"Win64",
+					"Test",
+					"D:\\woowaprecourse\\TimeAttack-Runner-Backend\\client\\TimeAttackRunner.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"TimeAttackRunner Win64 Test Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\UE_5.4"
+				}
+			},
+			{
+				"label": "TimeAttackRunner Win64 Test Clean",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"args": [
+					"TimeAttackRunner",
+					"Win64",
+					"Test",
+					"D:\\woowaprecourse\\TimeAttack-Runner-Backend\\client\\TimeAttackRunner.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\UE_5.4"
+				}
+			},
+			{
+				"label": "TimeAttackRunner Win64 Shipping Build",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"TimeAttackRunner",
+					"Win64",
+					"Shipping",
+					"D:\\woowaprecourse\\TimeAttack-Runner-Backend\\client\\TimeAttackRunner.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\UE_5.4"
+				}
+			},
+			{
+				"label": "TimeAttackRunner Win64 Shipping Rebuild",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"TimeAttackRunner",
+					"Win64",
+					"Shipping",
+					"D:\\woowaprecourse\\TimeAttack-Runner-Backend\\client\\TimeAttackRunner.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"TimeAttackRunner Win64 Shipping Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\UE_5.4"
+				}
+			},
+			{
+				"label": "TimeAttackRunner Win64 Shipping Clean",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"args": [
+					"TimeAttackRunner",
+					"Win64",
+					"Shipping",
+					"D:\\woowaprecourse\\TimeAttack-Runner-Backend\\client\\TimeAttackRunner.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\UE_5.4"
+				}
+			},
+			{
+				"label": "TimeAttackRunnerEditor Win64 Debug Build",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"TimeAttackRunnerEditor",
+					"Win64",
+					"Debug",
+					"D:\\woowaprecourse\\TimeAttack-Runner-Backend\\client\\TimeAttackRunner.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\UE_5.4"
+				}
+			},
+			{
+				"label": "TimeAttackRunnerEditor Win64 Debug Rebuild",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"TimeAttackRunnerEditor",
+					"Win64",
+					"Debug",
+					"D:\\woowaprecourse\\TimeAttack-Runner-Backend\\client\\TimeAttackRunner.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"TimeAttackRunnerEditor Win64 Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\UE_5.4"
+				}
+			},
+			{
+				"label": "TimeAttackRunnerEditor Win64 Debug Clean",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"args": [
+					"TimeAttackRunnerEditor",
+					"Win64",
+					"Debug",
+					"D:\\woowaprecourse\\TimeAttack-Runner-Backend\\client\\TimeAttackRunner.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\UE_5.4"
+				}
+			},
+			{
+				"label": "TimeAttackRunnerEditor Win64 DebugGame Build",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"TimeAttackRunnerEditor",
+					"Win64",
+					"DebugGame",
+					"D:\\woowaprecourse\\TimeAttack-Runner-Backend\\client\\TimeAttackRunner.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\UE_5.4"
+				}
+			},
+			{
+				"label": "TimeAttackRunnerEditor Win64 DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"TimeAttackRunnerEditor",
+					"Win64",
+					"DebugGame",
+					"D:\\woowaprecourse\\TimeAttack-Runner-Backend\\client\\TimeAttackRunner.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"TimeAttackRunnerEditor Win64 DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\UE_5.4"
+				}
+			},
+			{
+				"label": "TimeAttackRunnerEditor Win64 DebugGame Clean",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"args": [
+					"TimeAttackRunnerEditor",
+					"Win64",
+					"DebugGame",
+					"D:\\woowaprecourse\\TimeAttack-Runner-Backend\\client\\TimeAttackRunner.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\UE_5.4"
+				}
+			},
+			{
+				"label": "TimeAttackRunnerEditor Win64 Development Build",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"TimeAttackRunnerEditor",
+					"Win64",
+					"Development",
+					"D:\\woowaprecourse\\TimeAttack-Runner-Backend\\client\\TimeAttackRunner.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\UE_5.4"
+				}
+			},
+			{
+				"label": "TimeAttackRunnerEditor Win64 Development Rebuild",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"TimeAttackRunnerEditor",
+					"Win64",
+					"Development",
+					"D:\\woowaprecourse\\TimeAttack-Runner-Backend\\client\\TimeAttackRunner.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"TimeAttackRunnerEditor Win64 Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\UE_5.4"
+				}
+			},
+			{
+				"label": "TimeAttackRunnerEditor Win64 Development Clean",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"args": [
+					"TimeAttackRunnerEditor",
+					"Win64",
+					"Development",
+					"D:\\woowaprecourse\\TimeAttack-Runner-Backend\\client\\TimeAttackRunner.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\UE_5.4"
+				}
+			}
+		]
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"name": "Launch TimeAttackRunner (Debug)",
+				"request": "launch",
+				"program": "D:\\woowaprecourse\\TimeAttack-Runner-Backend\\client\\Binaries\\Win64\\UnrealGame-Win64-Debug.exe",
+				"preLaunchTask": "TimeAttackRunner Win64 Debug Build",
+				"args": [
+				],
+				"cwd": "D:\\UE_5.4",
+				"stopAtEntry": false,
+				"console": "integratedTerminal",
+				"type": "cppvsdbg",
+				"visualizerFile": "D:\\UE_5.4\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+				"sourceFileMap": {
+					"D:\\build\\++UE5\\Sync": "D:\\UE_5.4"
+				}
+			},
+			{
+				"name": "Launch TimeAttackRunner (DebugGame)",
+				"request": "launch",
+				"program": "D:\\woowaprecourse\\TimeAttack-Runner-Backend\\client\\Binaries\\Win64\\UnrealGame-Win64-DebugGame.exe",
+				"preLaunchTask": "TimeAttackRunner Win64 DebugGame Build",
+				"args": [
+				],
+				"cwd": "D:\\UE_5.4",
+				"stopAtEntry": false,
+				"console": "integratedTerminal",
+				"type": "cppvsdbg",
+				"visualizerFile": "D:\\UE_5.4\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+				"sourceFileMap": {
+					"D:\\build\\++UE5\\Sync": "D:\\UE_5.4"
+				}
+			},
+			{
+				"name": "Launch TimeAttackRunner (Development)",
+				"request": "launch",
+				"program": "D:\\woowaprecourse\\TimeAttack-Runner-Backend\\client\\Binaries\\Win64\\UnrealGame.exe",
+				"preLaunchTask": "TimeAttackRunner Win64 Development Build",
+				"args": [
+				],
+				"cwd": "D:\\UE_5.4",
+				"stopAtEntry": false,
+				"console": "integratedTerminal",
+				"type": "cppvsdbg",
+				"visualizerFile": "D:\\UE_5.4\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+				"sourceFileMap": {
+					"D:\\build\\++UE5\\Sync": "D:\\UE_5.4"
+				}
+			},
+			{
+				"name": "Launch TimeAttackRunner (Test)",
+				"request": "launch",
+				"program": "D:\\woowaprecourse\\TimeAttack-Runner-Backend\\client\\Binaries\\Win64\\UnrealGame-Win64-Test.exe",
+				"preLaunchTask": "TimeAttackRunner Win64 Test Build",
+				"args": [
+				],
+				"cwd": "D:\\UE_5.4",
+				"stopAtEntry": false,
+				"console": "integratedTerminal",
+				"type": "cppvsdbg",
+				"visualizerFile": "D:\\UE_5.4\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+				"sourceFileMap": {
+					"D:\\build\\++UE5\\Sync": "D:\\UE_5.4"
+				}
+			},
+			{
+				"name": "Launch TimeAttackRunner (Shipping)",
+				"request": "launch",
+				"program": "D:\\woowaprecourse\\TimeAttack-Runner-Backend\\client\\Binaries\\Win64\\UnrealGame-Win64-Shipping.exe",
+				"preLaunchTask": "TimeAttackRunner Win64 Shipping Build",
+				"args": [
+				],
+				"cwd": "D:\\UE_5.4",
+				"stopAtEntry": false,
+				"console": "integratedTerminal",
+				"type": "cppvsdbg",
+				"visualizerFile": "D:\\UE_5.4\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+				"sourceFileMap": {
+					"D:\\build\\++UE5\\Sync": "D:\\UE_5.4"
+				}
+			},
+			{
+				"name": "Launch TimeAttackRunnerEditor (Debug)",
+				"request": "launch",
+				"program": "D:\\UE_5.4\\Engine\\Binaries\\Win64\\UnrealEditor-Win64-Debug.exe",
+				"preLaunchTask": "TimeAttackRunnerEditor Win64 Debug Build",
+				"args": [
+					"D:\\woowaprecourse\\TimeAttack-Runner-Backend\\client\\TimeAttackRunner.uproject"
+				],
+				"cwd": "D:\\UE_5.4",
+				"stopAtEntry": false,
+				"console": "integratedTerminal",
+				"type": "cppvsdbg",
+				"visualizerFile": "D:\\UE_5.4\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+				"sourceFileMap": {
+					"D:\\build\\++UE5\\Sync": "D:\\UE_5.4"
+				}
+			},
+			{
+				"name": "Launch TimeAttackRunnerEditor (DebugGame)",
+				"request": "launch",
+				"program": "D:\\UE_5.4\\Engine\\Binaries\\Win64\\UnrealEditor-Win64-DebugGame.exe",
+				"preLaunchTask": "TimeAttackRunnerEditor Win64 DebugGame Build",
+				"args": [
+					"D:\\woowaprecourse\\TimeAttack-Runner-Backend\\client\\TimeAttackRunner.uproject"
+				],
+				"cwd": "D:\\UE_5.4",
+				"stopAtEntry": false,
+				"console": "integratedTerminal",
+				"type": "cppvsdbg",
+				"visualizerFile": "D:\\UE_5.4\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+				"sourceFileMap": {
+					"D:\\build\\++UE5\\Sync": "D:\\UE_5.4"
+				}
+			},
+			{
+				"name": "Launch TimeAttackRunnerEditor (Development)",
+				"request": "launch",
+				"program": "D:\\UE_5.4\\Engine\\Binaries\\Win64\\UnrealEditor.exe",
+				"preLaunchTask": "TimeAttackRunnerEditor Win64 Development Build",
+				"args": [
+					"D:\\woowaprecourse\\TimeAttack-Runner-Backend\\client\\TimeAttackRunner.uproject"
+				],
+				"cwd": "D:\\UE_5.4",
+				"stopAtEntry": false,
+				"console": "integratedTerminal",
+				"type": "cppvsdbg",
+				"visualizerFile": "D:\\UE_5.4\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+				"sourceFileMap": {
+					"D:\\build\\++UE5\\Sync": "D:\\UE_5.4"
+				}
+			},
+			{
+				"name": "Generate Project Files",
+				"type": "coreclr",
+				"request": "launch",
+				"preLaunchTask": "UnrealBuildTool Win64 Development Build",
+				"program": "D:\\UE_5.4\\Engine\\Build\\BatchFiles\\RunUBT.bat",
+				"args": [
+					"-projectfiles",
+					"-vscode",
+					"-project=D:\\woowaprecourse\\TimeAttack-Runner-Backend\\client\\TimeAttackRunner.uproject",
+					"-game",
+					"-engine",
+					"-dotnet"
+				],
+				"console": "integratedTerminal",
+				"stopAtEntry": false,
+				"cwd": "D:\\UE_5.4"
+			}
+		]
+	}
+}
