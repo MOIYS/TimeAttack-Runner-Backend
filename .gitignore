@@ -30,3 +30,17 @@ server/build/
 server/*.log
 server/hs_err_pid*
 server/replay_pid*
+
+# ================================================
+# 3. client
+# ================================================
+
+client/Binaries/
+client//Build/
+client/Intermediate/
+client/Saved/
+client/DerivedDataCache/
+client/*.sln
+client/*.suo
+client/.vs/
+client/.vscode/
