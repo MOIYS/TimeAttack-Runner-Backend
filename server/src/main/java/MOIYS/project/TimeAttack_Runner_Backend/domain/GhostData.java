@@ -14,6 +14,10 @@ import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import org.hibernate.annotations.JdbcTypeCode;
+import org.hibernate.type.SqlTypes;
+
+
 @Entity
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
@@ -24,6 +28,7 @@ public class GhostData {
     private Long id;
 
     @Column(columnDefinition = "JSONB", nullable = false)
+    @JdbcTypeCode(SqlTypes.JSON)
     private String coordinates;
 
     @OneToOne(fetch = FetchType.LAZY)
